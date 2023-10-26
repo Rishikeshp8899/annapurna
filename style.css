@@ -1,0 +1,367 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-size: 'Spartan';
+}
+body{
+    width: 100%;
+}
+/* Header set */ 
+#header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 60px;
+background-color: #E3E6F3;
+box-shadow: 0 5px 15px rgba(0,0,0,0.006);
+z-index: 999;
+position: sticky;
+top: 0;
+left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#navbar li{
+    list-style: none;
+    padding: 0 12px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a:active
+{
+    color: #088178;
+
+}
+
+#navbar.active{
+    right: 0px;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after
+{
+    content:"___";
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+
+/* hero Page */
+#hero{
+    background-image:url("./img/poster1.png");
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-position: top 25% right 0;
+    padding:0 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    background-color: #ccced8;
+    
+}
+#hero h4{
+    padding-bottom: 15px;
+}
+
+#hero h1{
+    padding-top: 15px;
+    color: #088178;
+    font-size: 50px;
+
+}
+
+#hero button{
+    background-image: url("./img/thermostat-temperature-control-icon-vector-22419146-removebg-preview.png");
+    background-color: transparent;
+    color:rgb(247, 0, 0);
+    border: 0; 
+    padding: 14px 80px 14px 65px;
+    background-repeat: no-repeat;
+    cursor: pointer;
+    font-weight: 700;
+    font-size: 15px;
+    border-radius: 15px;
+    background-size: cover;
+    height:120px;
+    width: 70px;
+    text-align: center;
+    
+}
+.section-p1{
+    padding: 40px 80px;
+}
+
+/*feature*/
+#feature{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+}
+#feature .fe-box{
+    width: 180px;
+    text-align: center;
+    padding: 25px 15px;
+    box-shadow: 20px 20px 34px rgba(0,0,0,0.3);
+    border: 1px solid #cce7de;
+    border-radius: 4px;
+}
+#feature .fe-box:hover{
+    box-shadow: 10px 10px 54px rgba(0,0,0,0.3);
+}
+
+#feature .fe-box img{
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+#feature .fe-box h6{
+    display: inline-block;
+    padding: 9px 8px 6px 8px;
+    line-height: 1;
+    border-radius: 4px;
+    color: #088178;
+    background-color: #fddde4;
+}
+#feature .fe-box:nth-child(2) h6{
+    background-color: #cce7de;
+}
+#feature .fe-box:nth-child(3) h6{
+    background-color: #d1e8f2;
+}
+#feature .fe-box:nth-child(4) h6{
+    background-color: #ccd0e7;
+}
+#feature .fe-box:nth-child(5) h6{
+    background-color: #fadcb9;
+}
+
+/*Product */
+#product1{
+    text-align: center;
+}
+#product1 .pro{
+    width: 23%;
+    min-width: 250px;
+    padding: 10px 12px;
+    border:1px solid #cce7d0;
+    box-shadow: 20px 20px 30px rgba(0,0,0,0.3);
+    margin: 15px 0;
+    transition: 0.2s ease;
+    position: relative;
+}
+#product1 .pro:hover{
+    box-shadow: 10px 10px 10px rgba(0,0,0,0.3);
+}
+.pro-container{
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-between;   
+    padding-top: 20px;
+}
+#product1 .pro img{
+    width: 100%;
+    border-radius: 20px;
+
+}
+#product1 .pro .des{
+    text-align: start;
+    padding: 10px 0;
+}
+#product1 .pro .des span{
+    color: #606063;
+    font-size: 12px;
+}
+
+#product1 .pro .des h5{
+    padding-top: 7px;
+    color: #1a1a1a;
+    font-size: 14px;
+}
+#product1 .pro .des i{
+    font-size: 12px;
+    color:rgb(255, 94, 0);
+}
+#product1 .pro .cart{
+   background-color: #088178;
+   border-radius: 50px;
+   width: max-content;
+   position: absolute;
+   bottom: 20px;
+   right: 10px;
+
+}
+#product1 .pro .cart i{
+    padding: 5px;
+    color: #ccd0e7;
+}
+/*Banner*/
+#banner h4{
+    font-size: 20px;
+
+}
+
+#banner h2{
+    font-size: 46px;
+    line-height: 54px;
+    
+}
+#banner .section-m1{
+    margin: 40px 0;
+}
+
+#banner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-image: url("./img/360_F_273629048_fEBsFLxMRaqXa0vWCK5ZkGGCu4kC35LZ.jpg");
+    color: #ffff;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+
+}
+#banner h4{
+  color: #ffff;
+  font-size: 16px;
+  padding: 10px 0;
+
+}
+
+#banner h2 span{
+    color: #ef3636;
+
+}
+#banner  button{
+    font-size:14px;
+    font-weight: 600;
+    padding: 15px 30px;
+    color: #000;
+    background-color: #ffff;
+    cursor: pointer;
+    border: none;
+    outline: none;
+    transition:0.2s ;
+    border-radius: 4px;
+
+}
+#banner  button:hover{
+    background-color: #088178;
+    color: #ffff;
+}
+/*Footer*/
+footer{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+footer .col{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 20px;
+}
+
+footer h4{
+    font-size: 15px;
+    padding-bottom: 20px;
+    margin: 0 0 8px 0;
+}
+footer p{
+    font-size: 13px;
+    margin: 0 0 8px 0;
+}
+footer  a {
+    font-size: 15px;
+    text-decoration: none;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+footer .col .Follow{
+    margin-top: 20px;
+}
+footer .col .Follow .icon{
+    color: #465b52;
+    padding-right: 4px;
+    cursor: pointer;
+}
+#footer .copyright{
+    width: 100%;
+    text-align: center;
+}
+footer .install .row img{
+    border:1px solid #088178;
+    border-radius: 6px;
+
+}
+footer .install  img{
+    margin:10px 0 15px 0;
+
+}
+
+footer .col a:hover,
+#footer .col .icon i:hover
+{
+    color: #088178;
+}
+
+/*Start Media Qury*/
+@media(max-width:799px){
+    #navbar{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color:#E3E6F3 ;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+
+    }
+    #navbar li{
+        margin-bottom: 25px;
+    }
+    #mobile{
+        display: flex;
+        align-items: center;
+    }
+    #mobile i{
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+}

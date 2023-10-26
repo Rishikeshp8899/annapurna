@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+
+    <title>Card Container with Horizontal Content</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+        }
+        #header{
+display: flex;
+align-items: center;
+justify-content: space-between;
+padding: 20px 60px;
+background-color: #E3E6F3;
+box-shadow: 0 5px 15px rgba(0,0,0,0.006);
+z-index: 999;
+position: sticky;
+top: 0;
+left: 0;
+}
+
+#navbar{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+}
+#navbar li{
+    list-style: none;
+    padding: 0 12px;
+    position: relative;
+}
+
+#navbar li a{
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1a1a1a;
+    transition: 0.3s ease;
+}
+#navbar li a:hover,
+#navbar li a:active
+{
+    color: #088178;
+
+}
+
+#navbar.active{
+    right: 0px;
+}
+#navbar li a.active::after,
+#navbar li a:hover::after
+{
+    content:"___";
+    width: 30%;
+    height: 2px;
+    position: absolute;
+    bottom: -4px;
+    left: 20px;
+
+}
+
+#mobile{
+    display: none;
+    align-items: center;
+}
+        .container {
+            display: flex;
+            flex-direction: column;
+            text-align: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .container-title {
+            font-size: 24px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .card {
+            width: 80%;
+
+            background-color: #fff;
+            border: 1px solid #e0e0e0;
+            margin: 10px;
+            padding: 15px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+        }
+
+        .card-image {
+            width: 100px;
+            height: 100px;
+            border: 1px solid #ccc;
+            margin-right: 10px;
+        }
+
+        .card-title {
+            flex-grow: 1;
+            font-weight: bold;
+        }
+
+        .card-content {
+            flex-grow: 2;
+        }
+
+        .card-link {
+            text-decoration: none;
+            color: #007BFF;
+            font-weight: bold;
+        }
+        .card button{
+            background-color: #32918a;
+            width: 90px;
+            height: 80px;
+            border-radius: 10px;
+            border: none;
+        }
+        .card button:hover{
+            background-color: #59a6f8;
+        }
+        .card button a{
+            color: #fff;
+        }
+        .card button a:hover{
+            color: #1a1a1a;
+        }
+    </style>
+</head>
+<body>
+    <section id="header">
+        <a href="#"><img src="./img/download.jpeg" alt="" width="100px" height="80px"></a>
+        <div>
+            <ul id="navbar">
+                <li>
+                    <a  href="./index.html">Home</a>
+                </li>
+                <li>
+                    <a class="active" href="./vendors.html"> vendors</a>
+                </li>
+                <li>
+                    <a href="#"> Contact</a>
+                </li>
+                <li><a href="./carts.html">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                </li>
+            </ul>
+        </div>
+        <div id="mobile">
+            <i id="bar" class="fas fa-outdent"></i>
+            <a href="./carts.html">
+                <i class="fa-solid fa-cart-shopping"></i>
+            </a>
+        </div>
+        </section>
+    <div class="container">
+        <h1 class="container-title">Venders Listings</h1>
+        <div class="card">
+            <img src="./img/0abc6d64dfc5021031dc1bae4401d158.jpg" alt="Product Image" class="card-image">
+            <div class="card-title">Company Name</div>
+            <div class="card-content">
+                This is a description of the product or any other relevant information. You can customize it as needed.
+            </div>
+            <button><a href="./photofolio.html" class="card-link">Learn More</a>
+            </button>
+        </div>
+        <div class="card">
+            <img src="./img/depositphotos_93172098-stock-photo-indian-woman-in-chef-uniform.jpg" alt="Product Image" class="card-image">
+            <div class="card-title">Company Name</div>
+            <div class="card-content">
+                This is a description of the product or any other relevant information. You can customize it as needed.
+            </div>
+            <button><a href="other-page.html" class="card-link">Learn More</a>
+            </button>
+        </div>
+        <div class="card">
+            <img src="./img/white-with-black-band-chef-cap-368869585-tv4id.jpg" alt="Product Image" class="card-image">
+            <div class="card-title">Company Name</div>
+            <div class="card-content">
+                This is a description of the product or any other relevant information. You can customize it as needed.
+            </div>
+            <button><a href="other-page.html" class="card-link">Learn More</a>
+            </button>
+        </div>
+        <div class="card">
+            <img src="./img/r5mifhb_home-chef_625x300_03_August_23.jpg" alt="Product Image" class="card-image">
+            <div class="card-title">Company Name</div>
+            <div class="card-content">
+                This is a description of the product or any other relevant information. You can customize it as needed.
+            </div>
+            <button><a href="other-page.html" class="card-link">Learn More</a>
+            </button>
+        </div>
+        <div class="card">
+            <img src="./img/download (3).jpeg" alt="Product Image" class="card-image">
+            <div class="card-title">Company Name</div>
+            <div class="card-content">
+                This is a description of the product or any other relevant information. You can customize it as needed.
+            </div>
+            <button><a href="other-page.html" class="card-link">Learn More</a>
+            </button>
+        </div>
+        <!-- Add more cards as needed -->
+    </div>
+</body>
+</html>
